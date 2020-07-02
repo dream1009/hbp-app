@@ -1,0 +1,232 @@
+@import './common/var.scss';
+@import './lc-field.scss';
+
+@import "./avatar.scss";
+@import "./card-list.scss";
+@import "./lc-checker.scss";
+@import "./lc-drop-menu.scss";
+@import "./lc-result-page.scss";
+@import "./lc-toolbar.scss";
+@import "./table.scss";
+
+
+button, input, optgroup, select, textarea {
+  line-height: inherit; 
+}
+body {
+  // background-color: #f5f5f9;
+  padding-top: constant(safe-area-inset-top);   //为导航栏+状态栏的高度 88px            
+  padding-left: constant(safe-area-inset-left);   //如果未竖屏时为0                
+  padding-right: constant(safe-area-inset-right); //如果未竖屏时为0                
+  padding-bottom: constant(safe-area-inset-bottom);//为底下圆弧的高度 34px       
+}
+p{
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+//滚动条样式
+::-webkit-scrollbar-track-piece {
+  background: #e8e8e8;
+}
+::-webkit-scrollbar {
+	width: 1px;
+	height: 1px;
+}
+::-webkit-scrollbar-thumb {
+  background: #9093994d;
+}
+
+.van-block__title{
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  color:$gray-dark;
+  padding: 15px;
+}
+
+.van-block__desc{
+  margin: 0;
+  font-weight: 400;
+  font-size: 12px;
+  color:$gray;
+  padding:  5px 15px 10px 25px;
+}
+
+.van-tabbar--fixed{
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+/**修复顶部，底部**/
+.lc-fixed-top{
+  margin-top: 46px;
+}
+
+.lc-fixed-bottom{
+  margin-bottom: 55px;
+}
+.lc-fixed-toolbar{
+  margin-bottom: 75px;
+}
+
+//http://mobile.51cto.com/hot-559323.htm
+@supports (bottom: constant(safe-area-inset-bottom)) { 
+  .lc-fixed-bottom{
+    margin-bottom: calc(55px + constant(safe-area-inset-bottom));
+  }
+  .lc-fixed-toolbar{
+    margin-bottom: calc(65px + constant(safe-area-inset-bottom));
+  }
+}
+
+.lc-fixed-navbar{
+  height: calc(100% - 46px); 
+  overflow:scroll
+}
+
+.lc-cell-wrapper{
+  padding: 10px 0; 
+  background: $background-color;
+}
+
+.lc-error-messsage{
+  width: 100%;
+  height: 80%;
+  max-height: 200px;
+  overflow: auto;
+}
+
+.hidden{
+  display: none;
+}
+.red{
+ color: $red;
+}
+
+.doing{
+  color: #4688f9;
+}
+.dont{
+  color: #666;
+}
+
+/**两翼留白 **/
+.lc-wingblank {
+  margin-left: 8px;
+  margin-right: 8px;
+  .lc-wingblank-sm {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .lc-wingblank-md {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .lc-wingblank-lg {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+/** 上下留白 */
+.lc-whitespace{
+  .lc-whitespace-xs {
+    height: 3px;
+  }
+  .lc-whitespace-sm {
+    height: 6px;
+  }
+  .lc-whitespace-md {
+    height: 9px;
+  }
+  .lc-whitespace-lg {
+    height: 15px;
+  }
+  .lc-whitespace-xl {
+    height: 21px;
+  }
+}
+
+
+.is-link{
+  color: #38f;
+}
+
+.root-title {
+  background-color:#fafafa;
+  white-space: nowrap;
+  overflow: auto;
+}
+
+.root-content  {
+  background-color:#fcfcfc;
+}
+// 工具类名统一前缀
+$prefix: ibps;
+
+// 在这里写公用的class
+// 注意 这个文件里只写class
+// mixin等内容请在 public.scss 里书写
+
+// 文字相关
+.#{$prefix}-text-center {
+  text-align: center;
+}
+//文字省略
+.#{$prefix}-ellipsis{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.#{$prefix}-help-block{
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #737373;
+}
+
+// 浮动相关
+.#{$prefix}-fl {
+  float: left;
+}
+.#{$prefix}-fr {
+  float: right;
+}
+.#{$prefix}-clearfix:before,
+.#{$prefix}-clearfix:after {
+  display: table;
+  content: "";
+}
+.#{$prefix}-clearfix:after {
+  clear: both
+}
+
+// 边距相关
+$sizes: (0, 5, 10, 15, 20);
+
+@for $index from 1 to 6 {
+  .#{$prefix}-m-#{nth($sizes, $index)} { margin: #{nth($sizes, $index)}px !important; }
+  .#{$prefix}-mt-#{nth($sizes, $index)} { margin-top: #{nth($sizes, $index)}px !important; }
+  .#{$prefix}-mr-#{nth($sizes, $index)} { margin-right: #{nth($sizes, $index)}px !important; }
+  .#{$prefix}-mb-#{nth($sizes, $index)} { margin-bottom: #{nth($sizes, $index)}px !important; }
+  .#{$prefix}-ml-#{nth($sizes, $index)} { margin-left: #{nth($sizes, $index)}px !important; }
+
+  .#{$prefix}-p-#{nth($sizes, $index)} { padding: #{nth($sizes, $index)}px !important; }
+  .#{$prefix}-pt-#{nth($sizes, $index)} { padding-top: #{nth($sizes, $index)}px !important; }
+  .#{$prefix}-pr-#{nth($sizes, $index)} { padding-right: #{nth($sizes, $index)}px !important; }
+  .#{$prefix}-pb-#{nth($sizes, $index)} { padding-bottom: #{nth($sizes, $index)}px !important; }
+  .#{$prefix}-pl-#{nth($sizes, $index)} { padding-left: #{nth($sizes, $index)}px !important; }
+}
+
+// 快速使用
+
+.#{$prefix}-m { margin: 20px !important; }
+.#{$prefix}-mt { margin-top: 20px !important; }
+.#{$prefix}-mr { margin-right: 20px !important; }
+.#{$prefix}-mb { margin-bottom: 20px !important; }
+.#{$prefix}-ml { margin-left: 20px !important; }
+
+.#{$prefix}-p { padding: 20px !important; }
+.#{$prefix}-pt { padding-top: 20px !important; }
+.#{$prefix}-pr { padding-right: 20px !important; }
+.#{$prefix}-pb { padding-bottom: 20px !important; }
+.#{$prefix}-pl { padding-left: 20px !important; }

@@ -1,0 +1,156 @@
+@import "./common/var.scss";
+@import "./mixins/ellipsis.scss";
+
+.van-card-list {
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  box-sizing: border-box;
+  line-height: 24px;
+  position: relative;
+  background-color: $white;
+  color: $text-color;
+  font-size: 14px;
+  overflow: hidden;
+
+  &:not(:last-child)::after {
+    left: 15px;
+    right: 5px;
+    bottom: 0;
+    top: 0;
+    transform: scale(1);
+    border-bottom-width: 1px;
+  }
+
+  &--center,
+  &__thumb,
+  &__icon {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__thumb,
+  &__icon {
+    top: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+
+    img {
+      border: none;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__icon {
+    top: 5px;
+    left: 15px;
+    position: absolute;
+
+    .van-icon {
+      font-size: 25px;
+    }
+  }
+
+  &,
+  &__thumb,
+  &__row {
+    display: flex;
+  }
+
+  &__content {
+    width: 100%;
+    flex-grow: 1;
+    margin: 0 5px;
+
+    &--center {
+      height: 90px;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    flex-grow: 1;
+  & __desc {
+     line-height: 20px;
+     word-break: break-all;
+  }
+  }
+  &__title {
+    flex-grow: 1;
+    max-height: 20px;
+    max-width: 160px;
+    text-align: left;
+
+    @include multi-ellipsis(1);
+  }
+
+  &__desc {
+    color: $gray-darker;
+    font-size: 12px;
+    min-width: 60px;
+
+    @include multi-ellipsis(1);
+  }
+  &__desc__title {
+    color: #455a64;
+    background-color: #f1f4f8;
+    margin: 2px;
+    padding: 2px;
+  }
+
+  &__date,
+  &__tag {
+    flex: 1;
+    min-width: 80px;
+    max-width: 120px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  &__date {
+    font-size: 14px;
+  }
+
+  &__tag {
+    min-width: 60px;
+    color: $gray-darker;
+    font-size: 12px;
+  }
+
+  &__right-icon {
+    color: $gray-dark;
+    font-size: 12px;
+    line-height: 24px;
+    align-items: center;
+    &--left::before {
+      transform: rotate(180deg);
+    }
+
+    &--up::before {
+      transform: rotate(-90deg);
+    }
+
+    &--down::before {
+      transform: rotate(90deg);
+    }
+  }
+
+  &--clickable {
+    &:active {
+      background-color: $active-color;
+    }
+  }
+  .van-checkbox{
+    padding-right: 5px;
+  }
+
+  &__row_between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row nowrap;
+  }
+}

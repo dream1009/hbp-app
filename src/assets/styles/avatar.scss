@@ -1,0 +1,101 @@
+//
+// Avatar
+// --------------------------------------------------
+@import './common/var.scss';
+$avatar-size:                     48px;
+$avatar-size-large:               96px;
+$avatar-size-small:               36px;
+$avatar-size-mini:                24px;
+$avatar-size-xl:                  126px;
+
+// Base style
+.avatar {
+  display: inline-flex;
+  // overflow: hidden;
+  width: $avatar-size;
+  height: $avatar-size;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  background-position: center;
+  background-size: cover;
+  color: $white;
+  min-width: 50px;
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  .image{
+    display: block;
+    position: relative;
+  }
+  .van-icon {
+    display: block;
+    font-size: $avatar-size/2;
+  }
+  .text{
+    display: block;
+    position: relative;
+  }
+  &--rounded {
+    border-radius: .5rem;
+  }
+  &--circle{
+     border-radius: 50%;
+  }
+
+  &__image-info{
+    font-size: .7em;
+    top:-.12em;
+  }
+  &__text-info{
+    font-size: 1.15em;
+    top: -.95em;
+  }
+
+ // Avatar sizes
+
+  &--small {
+    width: $avatar-size-small;
+    height: $avatar-size-small;
+    font-size: ($avatar-size-small/2);
+
+    > .van-icon {
+      font-size: ($avatar-size-mini/2)
+    }
+  }
+  &--mini {
+    width: $avatar-size-mini;
+    height: $avatar-size-mini;
+    font-size: ($avatar-size-mini/2);
+
+    > .van-icon {
+      font-size: ($avatar-size-mini/2)
+    }
+  }
+
+  &--large {
+    width: $avatar-size-large;
+    height: $avatar-size-large;
+    font-size: ($avatar-size-large/2);
+
+    > .van-icon {
+      font-size: ($avatar-size-mini/2)
+    }
+  }
+
+  &--xl {
+    width: $avatar-size-xl;
+    height: $avatar-size-xl;
+    font-size: ($avatar-size-xl/2);
+
+    > .van-icon {
+      font-size: ($avatar-size-mini/2)
+    }
+  }
+}
+
+

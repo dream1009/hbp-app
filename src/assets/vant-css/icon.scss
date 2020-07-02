@@ -1,0 +1,39 @@
+@import '../styles/common/var.scss';
+
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: 'vant-icon';
+  src: url('../fonts/iconfont.ttf') format('truetype');
+}
+
+.van-icon {
+  position: relative;
+  display: inline-block;
+  font: normal normal normal 14px/1 "vant-icon";
+  font-size: inherit;
+  text-rendering: auto;
+
+  &__info {
+    color: #fff;
+    left: 100%;
+    top: -.5em;
+    font-size: .5em;
+    padding: 0 .3em;
+    text-align: center;
+    min-width: 1.2em;
+    line-height: 1.2;
+    position: absolute;
+    border-radius: .6em;
+    box-sizing: border-box;
+    background-color: $info;
+    transform: translateX(-50%);
+    font-family: PingFang SC, Helvetica Neue, Arial, sans-serif;
+  }
+
+  &::before {
+    display: inline-block;
+  }
+}
+
+@import './icon-font.scss';

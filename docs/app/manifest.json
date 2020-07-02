@@ -1,0 +1,301 @@
+{
+	"@platforms": [
+		"android",
+		"iPhone",
+		"iPad"
+	],
+	"id": "H554F29D2",/*应用的标识，创建应用时自动生成，勿手动修改*/
+	"name": "hbp",/*应用名称，程序桌面图标名称*/
+	"version": {
+		"name": "2.8.9",/*应用版本名称*/
+		"code": ""
+	},
+	"description": "HBP platform app",/*应用描述信息*/
+	"icons": {
+		"72": "icon.png"
+	},
+	"launch_path": "index.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+	"developer": {
+		"name": "Hugh zhuang",/*开发者名称*/
+		"email": "zhuangxh@bpmhome.cn",/*开发者邮箱地址*/
+		"url": "http://www.bpmhonme.cn"
+	},
+	"permissions": {
+
+		"Cache": {
+			"description": "管理应用缓存"
+		},
+		"Console": {
+			"description": "跟踪调试输出日志"
+		},
+
+		"Events": {
+			"description": "应用扩展事件"
+		}
+	},
+	"plus": {
+		"splashscreen": {
+			"autoclose": true,/*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
+			"waiting": true
+		},
+		"popGesture": "close",/*设置应用默认侧滑返回关闭Webview窗口，"none"为无侧滑返回功能，"hide"为侧滑隐藏Webview窗口。参考http://ask.dcloud.net.cn/article/102*/
+		"runmode": "normal",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
+		"signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==",/*可选，保留给应用签名，暂不使用*/
+		"distribute": {
+			"apple": {
+				"appid": "",/*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
+				"mobileprovision": "",/*iOS应用打包配置文件*/
+				"password": "",/*iOS应用打包个人证书导入密码*/
+				"p12": "",/*iOS应用打包个人证书，打包配置文件关联的个人证书*/
+				"devices": "universal",/*iOS应用支持的设备类型，可取值iphone/ipad/universal*/
+				"frameworks": []
+			},
+			"google": {
+				"packagename": "",/*Android应用包名，如io.dcloud.HelloH5*/
+				"keystore": "",/*Android应用打包使用的密���库文件*/
+				"password": "",/*Android应用打包使用密钥库中证书的密码*/
+				"aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
+				"permissions": [
+					"<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+					"<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+					"<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+					"<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+					"<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+					"<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+					"<uses-feature android:name=\"android.hardware.camera\"/>",
+					"<uses-permission android:name=\"android.permission.CAMERA\"/>"
+				]
+			},
+			"orientation": [
+				"portrait-primary"
+			],/*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
+			"icons": {
+				"ios": {
+					"prerendered": true, /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
+					 /*应用图标，分辨率：512x512，用于自动生成各种尺寸程序图标*/
+					"iphone": {
+						"normal": "", /*iPhone3/3GS程序图标，分辨率：57x57*/
+						"retina": "", /*iPhone4程序图标，分辨率：114x114*/
+						 /*iPhone4S/5/6程序图标，分辨率：120x120*/
+						 /*iPhone6 Plus程序图标，分辨率：180x180*/
+						"spotlight-normal": "", /*iPhone3/3GS Spotlight搜索程序图标，分辨率：29x29*/
+						"spotlight-retina": "", /*iPhone4 Spotlight搜索程序图标，分辨率：58x58*/
+						 /*iPhone4S/5/6 Spotlight搜索程序图标，分辨率：80x80*/
+						"settings-normal": "", /*iPhone4设置页面程序图标，分辨率：29x29*/
+						 /*iPhone4S/5/6设置页面程序图标，分辨率：58x58*/
+						"app@2x":"unpackage/res/icons/120x120.png","app@3x":"unpackage/res/icons/180x180.png","settings@3x":"unpackage/res/icons/87x87.png","settings@2x":"unpackage/res/icons/58x58.png","spotlight@2x":"unpackage/res/icons/80x80.png","spotlight@3x":"unpackage/res/icons/120x120.png","notification@3x":"unpackage/res/icons/60x60.png","notification@2x":"unpackage/res/icons/40x40.png"
+					},
+					"ipad": {
+						"normal": "", /*iPad普通屏幕程序图标，分辨率：72x72*/
+						"retina": "", /*iPad高分屏程序图标，分辨率：144x144*/
+						 /*iPad iOS7程序图标，分辨率：76x76*/
+						 /*iPad iOS7高分屏程序图标，分辨率：152x152*/
+						"spotlight-normal": "", /*iPad Spotlight搜索程序图标，分辨率：50x50*/
+						"spotlight-retina": "", /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
+						/*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*/
+						/*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+						/*iPad设置页面程序图标，分辨率：29x29*/
+						"app":"unpackage/res/icons/76x76.png",
+						"app@2x":"unpackage/res/icons/152x152.png",
+						"settings":"unpackage/res/icons/29x29.png",
+						"proapp@2x":"unpackage/res/icons/167x167.png",
+						"spotlight":"unpackage/res/icons/40x40.png",
+						"settings@2x":"unpackage/res/icons/58x58.png",
+						"spotlight@2x":"unpackage/res/icons/80x80.png",
+						"notification":"unpackage/res/icons/20x20.png",
+						"notification@2x":"unpackage/res/icons/40x40.png"
+					},
+					"appstore":"unpackage/res/icons/1024x1024.png"
+				},
+				"android": {
+					"mdpi": "unpackage/res/icons/48x48.png", /*普通屏程序图标，分辨率：48x48*/
+					"ldpi": "unpackage/res/icons/48x48.png", /*大屏程序图标，分辨率：48x48*/
+					"hdpi": "unpackage/res/icons/72x72.png", /*高分屏程序图标，分辨率：72x72*/
+					"xhdpi": "unpackage/res/icons/96x96.png",/*720P高分屏程序图标，分辨率：96x96*/
+					"xxhdpi": "unpackage/res/icons/144x144.png",
+					"xxxhdpi":"unpackage/res/icons/192x192.png"
+				}
+			},
+			"splashscreen": {
+				"ios": {
+					"iphone": {
+						"default": "", /*iPhone3启动图片选，分辨率：320x480*/
+						"retina35": "",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
+						"retina40": "",/*4.0 英寸设备(iPhone5/iPhone5s)启动图片，分辨率：640x1136*/
+						"retina47": "",/*4.7 英寸设备(iPhone6)启动图片，分辨率：750x1334*/
+						"retina55": "",/*5.5 英寸设备(iPhone6 Plus)启动图片，分辨率：1242x2208*/
+						"retina55l": ""
+					},
+					"ipad": {
+						"portrait": "", /*iPad竖屏启动图片，分辨率：768x1004*/
+						"portrait-retina": "",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
+						"landscape": "", /*iPad横屏启动图片，分辨率：1024x748*/
+						"landscape-retina": "", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
+						"portrait7": "", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
+						"portrait-retina7": "unpackage/res/splash/1080x1620.png",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
+						"landscape7": "", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
+						"landscape-retina7": "unpackage/res/splash/1080x1620.png"
+					}
+				},
+				"android": {
+					"mdpi": "", /*普通屏启动图片，分辨率：240x282*/
+					"ldpi": "", /*大屏启动图片，分辨率：320x442*/
+					"hdpi": "unpackage/res/splash/1080x1620.png",
+					"xhdpi":"unpackage/res/splash/1080x1620.png",
+					"xxhdpi":"unpackage/res/splash/1080x1620.png"
+				}
+			},
+			"debug": false
+		},"adid":"123121170209"
+	},
+	"dependencies": {
+	  "pages": {
+	    "index.html": {
+	      "href": "index.html",
+	      "priority": 0,
+	      "resources": [
+	        "favicon.ico"
+	      ],
+	      "refer": []
+	    }
+	  },
+	  "idle": {
+	    "resources": [
+	      "static/css/chunk-f978.77c16ce1.css",
+	      "static/js/chunk-vant.72286c19.js",
+	      "static/images/file/eps.png",
+	      "static/images/file/accdb.png",
+	      "static/js/chunk-70b0.88ad6363.js",
+	      "static/images/file/avi.png",
+	      "static/images/file/mov.png",
+	      "static/images/file/tiff.png",
+	      "static/images/file/fla.png",
+	      "static/js/chunk-6bc7.50f1ab49.js",
+	      "static/css/chunk-6706.fd6881ed.css",
+	      "static/css/chunk-40b5.1ff8b2fe.css",
+	      "static/css/chunk-0ea7.7c41b0b8.css",
+	      "static/images/result-page/noRights.png",
+	      "static/images/file/gif.png",
+	      "static/js/chunk-f978.6977a33e.js",
+	      "static/images/result-page/network.png",
+	      "static/css/chunk-675c.d1b84d4d.css",
+	      "static/images/result-page/lost.png",
+	      "static/js/f6Ka.96e5815f.js",
+	      "static/js/chunk-4c3c.fc9c5712.js",
+	      "static/js/7FXn.c1be30c1.js",
+	      "static/images/file/z.png",
+	      "static/js/chunk-24d1.15a92965.js",
+	      "static/css/chunk-15cf.027c66e3.css",
+	      "static/images/file/wma.png",
+	      "static/js/chunk-9559.8a20710d.js",
+	      "static/css/chunk-af6e.027c66e3.css",
+	      "static/css/chunk-1c00.6f40111d.css",
+	      "static/css/chunk-0212.d2bb6ff5.css",
+	      "static/images/file/m4a.png",
+	      "static/images/file/psd.png",
+	      "static/images/file/gz.png",
+	      "static/images/file/vsd.png",
+	      "static/js/chunk-5e78.f05e6438.js",
+	      "static/css/chunk-9559.c762b259.css",
+	      "static/js/chunk-15cf.3ab2cc4f.js",
+	      "static/js/chunk-105c.003fe8c2.js",
+	      "static/images/file/doc.png",
+	      "static/images/file/rtf.png",
+	      "static/fonts/iconfont.1f1ce04.ttf",
+	      "static/images/file/mmf.png",
+	      "static/images/file/ppt.png",
+	      "static/images/file/rar.png",
+	      "static/css/chunk-4b0a.66e56253.css",
+	      "static/css/app.7d09c9f7.css",
+	      "static/images/file/proj.png",
+	      "static/images/file/zip.png",
+	      "static/css/chunk-comomns.8a1c5f5b.css",
+	      "static/js/chunk-40ae.de8a6553.js",
+	      "static/js/chunk-libs.1e28dc1a.js",
+	      "static/images/file/pdf.png",
+	      "static/images/file/wav.png",
+	      "static/images/file/readme.png",
+	      "static/css/chunk-libs.3e3826ab.css",
+	      "static/images/file/tif.png",
+	      "static/css/chunk-70b0.0210b9e0.css",
+	      "static/images/file/docx.png",
+	      "static/images/file/swf.png",
+	      "static/js/chunk-1a85.77162c5c.js",
+	      "static/images/file/wmv.png",
+	      "static/images/file/html.png",
+	      "static/js/chunk-409e.6f4813da.js",
+	      "static/images/file/arj.png",
+	      "static/images/result-page/error.png",
+	      "static/js/chunk-6706.7ada984d.js",
+	      "static/images/file/bmp.png",
+	      "static/css/chunk-1496.d1e25a7f.css",
+	      "static/js/chunk-3c54.add8886e.js",
+	      "static/images/file/pst.png",
+	      "static/js/chunk-1c00.56ebec6d.js",
+	      "static/images/file/rmvb.png",
+	      "static/images/file/png.png",
+	      "static/js/chunk-34b3.d0c2d473.js",
+	      "static/js/chunk-d20a.db0a4b03.js",
+	      "static/css/chunk-5e78.c7c853ec.css",
+	      "static/images/file/ini.png",
+	      "static/images/file/mpeg.png",
+	      "static/images/file/ind.png",
+	      "static/images/file/csv.png",
+	      "static/images/file/xlsx.png",
+	      "static/js/chunk-comomns.e2526ea4.js",
+	      "static/images/file/mp3.png",
+	      "static/images/file/ai.png",
+	      "static/js/chunk-38a8.68338309.js",
+	      "static/css/chunk-65bb.26aa83f4.css",
+	      "static/images/file/7z.png",
+	      "static/images/file/xls.png",
+	      "static/css/chunk-d20a.8556a6cd.css",
+	      "static/js/chunk-1061.677ca711.js",
+	      "static/js/chunk-675c.28051b76.js",
+	      "static/images/file/mkv.png",
+	      "static/js/chunk-962a.7b76907d.js",
+	      "static/images/file/attachment.png",
+	      "static/js/app.b6976358.js",
+	      "static/images/file/ape.png",
+	      "static/images/result-page/empty.png",
+	      "static/js/chunk-4b0a.104c859a.js",
+	      "static/js/chunk-af6e.2b1f6bfb.js",
+	      "static/js/chunk-1496.6e069380.js",
+	      "static/js/chunk-65bb.0e84e5da.js",
+	      "static/css/chunk-3ab5.ffd3978c.css",
+	      "static/images/file/jpg.png",
+	      "static/images/file/midi.png",
+	      "static/images/file/pub.png",
+	      "static/images/file/settings.png",
+	      "static/js/chunk-hlsjs.1a7a6283.js",
+	      "static/images/file/jsf.png",
+	      "static/images/file/jpeg.png",
+	      "static/images/file/pptx.png",
+	      "static/images/swipes/banner3.png",
+	      "static/images/file/ram.png",
+	      "static/js/chunk-0ea7.e3f7ebc3.js",
+	      "static/css/chunk-962a.c5d06e0a.css",
+	      "static/css/chunk-34b3.711733c1.css",
+	      "static/js/chunk-3ab5.0537b1be.js",
+	      "static/images/file/flac.png",
+	      "static/images/file/text.png",
+	      "static/images/file/css.png",
+	      "static/images/file/au.png",
+	      "static/js/chunk-pdfjs.d96b6029.js",
+	      "static/js/chunk-40a4.5d0c97f6.js",
+	      "static/images/file/mpg.png",
+	      "static/images/file/acc.png",
+	      "static/js/chunk-40b5.170fb20e.js",
+	      "static/js/chunk-6aec.af7ffc77.js",
+	      "static/images/file/url.png",
+	      "static/images/file/txt.png",
+	      "static/js/JEtC.0dffa377.js",
+	      "static/images/swipes/banner2.png",
+	      "static/images/file/eml.png",
+	      "static/images/file/mp4.png",
+	      "static/js/chunk-0212.60dc3443.js",
+	      "static/js/J1RP.2aaadc4f.js"
+	    ]
+	  }
+	}
+}

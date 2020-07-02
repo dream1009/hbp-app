@@ -1,0 +1,94 @@
+
+/**
+ * 用于流程状态转换
+ * @type type的类型有default、primary、danger、success等，也可以自定义
+ */
+export const statusOptions = [{
+  value: 'NORMAL',
+  label: '普通任务',
+  type: 'primary'
+}, {
+  value: 'AGENT',
+  label: '代理任务',
+  type: 'primary'
+}, {
+  value: 'DELIVERTO',
+  label: '转交任务',
+  type: 'danger'
+}, {
+  value: 'TRANSFORMING',
+  label: '流转源任务',
+  type: 'danger'
+}, {
+  value: 'TRANSFORMED',
+  label: '接收流转任务',
+  type: 'success'
+}, {
+  value: 'COMMU',
+  label: '通知任务',
+  type: 'success'
+}, {
+  value: 'draft',
+  label: '草稿',
+  type: 'default'
+}, {
+  value: 'running',
+  label: '运行中',
+  type: 'primary'
+}, {
+  value: 'suspend',
+  label: '挂起',
+  type: 'danger'
+}, {
+  value: 'end',
+  label: '结束',
+  type: 'danger'
+}, {
+  value: 'manualend',
+  label: '人工结束',
+  type: 'danger'
+}, {
+  value: 'rejectToStart',
+  label: '驳回到发起人',
+  type: 'danger'
+}, {
+  value: 'reject',
+  label: '驳回',
+  type: 'danger'
+}, {
+  value: 'revoke',
+  label: '撤销',
+  type: 'danger'
+}, {
+  value: 'revokeToStart',
+  label: '撤销到发起人',
+  type: 'danger'
+}, {
+  value: 'deploy',
+  label: '已发布',
+  type: 'primary'
+}, {
+  value: 'finish',
+  label: '完成',
+  type: 'danger'
+}, {
+  value: 'assignee',
+  label: '代理',
+  type: 'primary'
+}, {
+  value: 'shift',
+  label: '转办',
+  type: 'primary'
+}, {
+  value: 'cancel',
+  label: '取消',
+  type: 'primary'
+}, {
+  value: true,
+  label: '已收藏',
+  type: 'primary'
+}, {
+  value: false,
+  label: '未收藏',
+  type: 'success'
+}]

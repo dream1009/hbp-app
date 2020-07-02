@@ -1,0 +1,65 @@
+/* color variables */
+$black: #000;
+$white: #fff;
+$red: #f44;
+$blue: #38f;
+$orange: #f60;
+$green: #06bf04;
+$gray: #c9c9c9;
+$gray-light: #e5e5e5;
+$gray-darker: #666;
+$gray-dark: #999;
+/** 自定义*/
+$yellow:#f1a325;
+$purple: #8666b8;
+$brown: #bd7b46;
+$green-pale:#ddf4df;
+$yellow-pale:#fff0d5;
+$red-pale:  #ffe5e0;
+$blue-pale: #ddf3f5;
+$brown-pale:#f7ebe1;
+$purple-pale:#f5eeff;
+$info:#ff5b05;
+
+/* default colors */
+$text-color: #333;
+$border-color: $gray-light;
+$active-color: #e8e8e8;
+$background-color: #f8f8f8;
+
+/* button */
+$button-default-color: $text-color;
+$button-default-background-color: $white;
+$button-default-border-color: $border-color;
+$button-primary-color: $white;
+$button-primary-background-color: $blue;
+$button-primary-border-color: $blue;
+$button-danger-color: $white;
+$button-danger-background-color:$red;
+$button-danger-border-color: $red;
+$button-warning-color: $white;
+$button-warning-background-color: $orange;
+$button-warning-border-color: $orange;
+$button-disabled-color: $gray-dark;
+$button-disabled-background-color: $active-color;
+$button-disabled-border-color: $border-color;
+$button-bottom-action-default-color: $white;
+$button-bottom-action-default-background-color: #f85;
+$button-bottom-action-primary-color: $white;
+$button-bottom-action-primary-background-color: $red;
+
+// font-size vars
+$fontsize-large-xxxx :30px;
+$fontsize-large-xxx :24px;
+$fontsize-large-xx : 20px;
+$fontsize-large-x : 18px;
+$fontsize-large : 16px;
+$fontsize-medium : 14px;
+$fontsize-small : 12px;
+$fontsize-small-s : 10px;
+
+// radius-size
+$radius-size-medium : 5px;
+
+// box-shadow
+$box-shadow-content : 0 1px 3px rgba(0, 0, 0, .1);
