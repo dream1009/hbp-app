@@ -84,7 +84,7 @@
     "husky": "2.3.0",
     "lint-staged": "8.1.7",
     "mockjs": "1.0.1-beta3",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "plop": "2.3.0",
     "prettier": "^2.0.5",
     "progress-bar-webpack-plugin": "^1.12.1",
